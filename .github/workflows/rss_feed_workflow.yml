@@ -2,7 +2,7 @@ name: RSS Feed Workflow
 
 on:
   schedule:
-    - cron: '0 * * * *' # This will run the workflow every hour. Adjust the cron schedule as needed.
+    - cron: '*/10  * * * *'
 
 jobs:
   combine_rss_feeds:
