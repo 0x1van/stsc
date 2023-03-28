@@ -25,10 +25,16 @@ jobs:
       - name: Run script to combine RSS feeds
         run: python scripts/rss/combine_rss.py
 
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
           git add combined_rss_feed.xml
-          git commit -m "Update combined RSS feed" || exit 0
+          git commit -m "Update combined RSS feed"
           git push
+        env:
+          GIT_AUTH_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+
