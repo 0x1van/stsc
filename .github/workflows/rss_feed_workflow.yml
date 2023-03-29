@@ -2,7 +2,7 @@ name: RSS Feed Workflow
 
 on:
   schedule:
-    - cron: '0/5 * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   combine_rss_feeds:
