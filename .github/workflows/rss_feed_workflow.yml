@@ -25,6 +25,9 @@ jobs:
       - name: Run script to combine RSS feeds
         run: python scripts/rss/combine_rss.py
 
+      - name: Run script to share new entries to Discord
+        run: python scripts/rss/post_to_discord.py
+
       - name: Configure Git
         run: |
           git config user.name "GitHub Actions Bot"
@@ -33,7 +36,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git add combined_rss_feed.xml
-          git commit -m "Update combined RSS feed"
+          git commit -m "Update combined RSS feed and shared new Discord entries"
           git push
         env:
           GIT_AUTH_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
