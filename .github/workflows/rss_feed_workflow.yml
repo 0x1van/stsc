@@ -24,9 +24,19 @@ jobs:
 
       - name: Run script to combine RSS feeds
         run: python scripts/rss/combine_rss.py
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          DISCORD_GUILD: ${{ secrets.DISCORD_GUILD }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          OPENAI: ${{ secrets.OPENAI }}
 
       - name: Run script to share new entries to Discord
         run: python scripts/rss/post_to_discord.py
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          DISCORD_GUILD: ${{ secrets.DISCORD_GUILD }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          OPENAI: ${{ secrets.OPENAI }}
 
       - name: Configure Git
         run: |
