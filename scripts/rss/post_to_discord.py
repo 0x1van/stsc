@@ -52,9 +52,10 @@ def read_sent_entries(file_path):
         sent_entries = []
     return sent_entries
 
-def write_sent_entries(file_path, entry_id):
+def write_sent_entries(file_path, sent_entries: list):
     with open(file_path, 'a') as f:
-        f.write(f'{entry_id}\n')
+        for entry_id in sent_entries:
+            f.write(f'{entry_id}\n')
 
 def parse_entry(entry, retries=3, delay=5):
     title = entry.title
@@ -127,8 +128,9 @@ async def send_new_entries():
             blurb = make_blurb(article['content'])
             
             content = f'**{title}** by {author}\n{link}\n{blurb}'
+            sent_entries.append(entry_id)
             await channel.send(content)
-            write_sent_entries(SENT_ENTRIES_FILE, entry_id)
+            write_sent_entries(SENT_ENTRIES_FILE)
 
 @bot.event
 async def on_ready():
