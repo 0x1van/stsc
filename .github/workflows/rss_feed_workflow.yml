@@ -46,6 +46,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git add combined_rss_feed.xml
+          git add sent_entries.txt
           git commit -m "Update combined RSS feed and shared new Discord entries"
           git push
         env:
