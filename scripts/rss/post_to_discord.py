@@ -130,7 +130,7 @@ async def send_new_entries():
             content = f'**{title}** by {author}\n{link}\n{blurb}'
             sent_entries.append(entry_id)
             await channel.send(content)
-            write_sent_entries(SENT_ENTRIES_FILE)
+            write_sent_entries(SENT_ENTRIES_FILE, sent_entries)
 
 @bot.event
 async def on_ready():
