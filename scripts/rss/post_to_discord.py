@@ -1,5 +1,6 @@
 import os
 import discord
+import pandas as pd
 from discord.ext import commands
 from newspaper import Article
 import feedparser
@@ -32,6 +33,7 @@ llm = ChatOpenAI(
 
 # Parse the combined RSS feed
 def get_new_entries(feed_path):
+    """Get new entries from RSS feed. Returns a list of feedparser entries."""
     current_time = time.mktime(datetime.now().timetuple())
     entries = []
 
@@ -45,17 +47,15 @@ def get_new_entries(feed_path):
     return entries
 
 def read_sent_entries(file_path):
+    """"""
     try:
-        with open(file_path, 'r') as f:
-            sent_entries = f.read().splitlines()
+        sent_entries = pd.read_csv(file_path).drop_duplicates(['link'])
     except FileNotFoundError:
-        sent_entries = []
+        sent_entries = pd.DataFrame(columns=['link', 'sent_time', 'title', 'author'])
     return sent_entries
 
-def write_sent_entries(file_path, sent_entries: list):
-    with open(file_path, 'a') as f:
-        for entry_id in sent_entries:
-            f.write(f'{entry_id}\n')
+def write_sent_entries(file_path, sent_entries: pd.DataFrame):
+    sent_entries.to_csv(file_path, index=False)
 
 def parse_entry(entry, retries=3, delay=5):
     title = entry.title
@@ -99,15 +99,19 @@ def summarize(content, prompt_template):
 
 def make_blurb(content):
     blurb_prompt_template = """
-    You are an editor of an online magazine featuring fiction and non-fiction.
-    You have unique voice and use eloquent language. You write in intoxicating style. You write inebriating prose.
-    Use friendly and informal tone. Refer to the author by their name.
-    In one-three sentences, write an short review-summary for the following article:
+    You are an editor of an online magazine called The Soaring Twenties Social Club featuring fiction and non-fiction.
+    
+    You have unique and eloquent voice. 
+    You should sound very British. Be casual and friendly.
+    Don't use marketing jargon like "must-read" or "best-selling" and others.
+    Refer to the author by their name like you're friends.
+    
+    You are writing a blurb for an article. You want to make it sound interesting, witty and inviting.
+    You have 280 characters to write a blurb. You can use the following article as a reference:
 
     {text}
 
-
-    REVIEW-SUMMARY:"""
+    BLURB:"""
     return summarize(content, prompt_template=blurb_prompt_template)
 
 
@@ -119,16 +123,16 @@ async def send_new_entries():
     for entry in new_entries:
         entry_id = entry.link
 
-        if entry_id not in sent_entries:
+        if entry_id not in sent_entries.link.values:
             title = entry.title
             link = entry.link
             author = entry.author if hasattr(entry, 'author') else 'Unknown Author'
-            
             article = parse_entry(entry)
             blurb = make_blurb(article['content'])
             
             content = f'**{title}** by {author}\n{link}\n{blurb}'
-            sent_entries.append(entry_id)
+            entry_dict = {'link': entry_id, 'sent_time': datetime.now(), 'title': title, 'author': author}
+            sent_entries = sent_entries.append(entry_dict, ignore_index=True)
             await channel.send(content)
             write_sent_entries(SENT_ENTRIES_FILE, sent_entries)
 

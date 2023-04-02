@@ -1,41 +1,6 @@
-https://www.psychophysical.org/p/im-done-with-this-experiment
-https://jamesmaynard.substack.com/p/the-ground-was-errant-made
-https://flickfilosopher.substack.com/p/daily-stream-how-watching-affects
-https://lenright.substack.com/p/more-whole-things
-https://howaboutthis.substack.com/p/a-master-magicians-methods-to-manufacture
-https://jamesmaynard.substack.com/p/the-ground-was-errant-made
-https://imcanary.substack.com/p/comparison-post
-https://polarisdib.substack.com/p/derailment
-https://soaringtwenties.substack.com/p/george-harrison-and-the-struggle
-https://yeahwednesdays.substack.com/p/10-to-the-top-to-the-bottom-of-the
-https://yeahwednesdays.substack.com/p/10-to-the-top-to-the-bottom-of-the
-https://journal.coffee/a-seconds-worth-of-clarity/
-https://flickfilosopher.substack.com/p/daily-stream-a-house-that-love-builds
-https://terryfreedman.substack.com/p/letter-to-rebecca-9
-https://pulpvitalist.substack.com/p/the-last-son-of-rome
-https://terryfreedman.substack.com/p/meadow-the-intimate-bond-between
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://www.psychophysical.org/p/im-done-with-this-experiment
-https://jamesmaynard.substack.com/p/the-ground-was-errant-made
-https://flickfilosopher.substack.com/p/daily-stream-how-watching-affects
-https://lenright.substack.com/p/more-whole-things
-https://howaboutthis.substack.com/p/a-master-magicians-methods-to-manufacture
-https://jamesmaynard.substack.com/p/the-ground-was-errant-made
-https://imcanary.substack.com/p/comparison-post
-https://polarisdib.substack.com/p/derailment
-https://soaringtwenties.substack.com/p/george-harrison-and-the-struggle
-https://yeahwednesdays.substack.com/p/10-to-the-top-to-the-bottom-of-the
-https://yeahwednesdays.substack.com/p/10-to-the-top-to-the-bottom-of-the
-https://journal.coffee/a-seconds-worth-of-clarity/
-https://flickfilosopher.substack.com/p/daily-stream-a-house-that-love-builds
-https://terryfreedman.substack.com/p/letter-to-rebecca-9
-https://pulpvitalist.substack.com/p/the-last-son-of-rome
-https://terryfreedman.substack.com/p/meadow-the-intimate-bond-between
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://botharetrue.substack.com/p/youve-heard-of-the-ama-ask-me-anything
-https://www.ioann.xyz/p/another-stitch-on-the-wall-d98
+link,sent_time,title,author
+https://flickfilosopher.substack.com/p/daily-stream-a-pandemic-perfect-cinematic,2023-04-02 11:54:47.674570,daily stream: a pandemic perfect cinematic storm,MaryAnn Johanson
+https://yardenaschwersky.substack.com/p/memory-trains,2023-04-02 11:54:51.991056,Memory Trains,Yardena Schwersky
+https://terryfreedman.substack.com/p/experiments-in-style-by-a-very-private,2023-04-02 11:54:54.941253,"Experiments in style, by a very private person...",𝚃𝚎𝚛𝚛𝚢 𝙵𝚛𝚎𝚎𝚍𝚖𝚊𝚗
+https://terryfreedman.substack.com/p/25-websites-for-free-illustrations,2023-04-02 11:54:59.536977,25 websites for free illustrations,𝚃𝚎𝚛𝚛𝚢 𝙵𝚛𝚎𝚎𝚍𝚖𝚊𝚗
+https://acabinetofcuriosities.substack.com/p/aubade-chapter-2,2023-04-02 11:55:03.258565,Aubade: Chapter 2,Minna
