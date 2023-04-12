@@ -76,3 +76,6 @@ https://journal.coffee/the-performer-the-spectator/,2023-04-11 20:15:40.779505,T
 https://terryfreedman.substack.com/p/deadly-at-midnight,2023-04-11 20:15:43.638275,Deadly at Midnight,𝚃𝚎𝚛𝚛𝚢 𝙵𝚛𝚎𝚎𝚍𝚖𝚊𝚗
 https://clintavo.substack.com/p/let-there-be-light,2023-04-12 01:08:21.059740,Let There Be Light,Clintavo
 https://meblaustone.substack.com/p/the-snapple-dum-dum-gang,2023-04-12 08:19:31.568848,The Snapple Dum-Dum Gang,M.E. Blaustone
+https://theofuturism.substack.com/p/the-problem-of-eternity,2023-04-12 12:28:10.149735,The Problem of Eternity,Pr0ph3t
+https://charliebecker.substack.com/p/castles-in-the-sky-29,2023-04-12 12:28:15.598475,Castles in the Sky 29,Charlie Becker
+https://howaboutthis.substack.com/p/on-the-shifting-sands-of-microblogging,2023-04-12 12:28:19.359621,On the shifting sands of microblogging and newsletter platforms,Mark Dykeman
